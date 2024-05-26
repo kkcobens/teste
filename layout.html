@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Equações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo de Equações</h1>
+        <div>
+            <label for="equationType">Escolha o tipo de equação:</label>
+            <select id="equationType" onchange="startGame()">
+                <option value="1">Equação de 1º Grau</option>
+                <option value="2">Equação de 2º Grau</option>
+            </select>
+        </div>
+        <div id="game">
+            <h2 id="equation"></h2>
+            <input type="text" id="answer1" placeholder="Digite a primeira resposta">
+            <input type="text" id="answer2" placeholder="Digite a segunda resposta (se necessário)" style="display:none;">
+            <button onclick="checkAnswer()">Enviar</button>
+        </div>
+        <div id="result"></div>
+        <div id="lives"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
